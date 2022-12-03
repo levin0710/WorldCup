@@ -28,7 +28,7 @@ def create_app():
 
     # Import the various routes
     from src.views import views
-    from src.customers.customers import customers
+    from src.countries.countries import customers
     from src.products.products import products
 
     # Register the routes that we just imported so they can be properly handled
