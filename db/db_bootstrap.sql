@@ -211,6 +211,7 @@ insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssis
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Huff', 10, 19, 'Mydeo', 17, 81, 'Bera', 5, 'Moishe', 'China');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Hover', 14, 30, 'Tavu', 27, 68, 'Yaosai', 2, 'Darn', 'China');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Chippendale', 12, 28, 'Skinte', 3, 55, 'Novovolyns’k', 1, 'Denys', 'China');
+insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Levin', 12, 28, 'Skinte', 3, 55, 'Novovolyns’k', 1, 'Levin', 'Russia');
 
 
 insert into Orders (OrderID ,ShipAddress, Quantity, TotalPrice, OrderDate) values (1, '08783 Continental Lane', 39, 362.79, '7/4/2022');
