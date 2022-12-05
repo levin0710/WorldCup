@@ -3,12 +3,10 @@ import json
 from src import db
 
 
-customers = Blueprint('countries', __name__)
-
-# Get all customers from the DB
+countries = Blueprint('countries', __name__)
 
 
-@customers.route('/countries', methods=['GET'])
+@countries.route('/countries', methods=['GET'])
 def get_countries():
     cursor = db.get_db().cursor()
     cursor.execute(''' select CountryName from Country ''')
@@ -25,7 +23,7 @@ def get_countries():
 # Get customer detail for customer with particular userID
 
 
-@customers.route('/countries/players/<CountryName>', methods=['GET'])
+@countries.route('/countries/players/<CountryName>', methods=['GET'])
 def get_players(CountryName):
     cursor = db.get_db().cursor()
     cursor.execute(
@@ -41,7 +39,7 @@ def get_players(CountryName):
     return the_response
 
 
-@customers.route('/countries/stats/<CountryName>', methods=['GET'])
+@countries.route('/countries/stats/<CountryName>', methods=['GET'])
 def get_stats(CountryName):
     cursor = db.get_db().cursor()
     cursor.execute(
@@ -57,7 +55,7 @@ def get_stats(CountryName):
     return the_response
 
 
-@customers.route('/countries/<CountryName>/<JerseyNum>', methods=['GET'])
+@countries.route('/countries/<CountryName>/<JerseyNum>', methods=['GET'])
 def get_player(CountryName, JerseyNum):
     cursor = db.get_db().cursor()
     cursor.execute(
@@ -75,7 +73,7 @@ def get_player(CountryName, JerseyNum):
     return the_response
 
 
-@customers.route('/countries/players/<CountryName>', methods=['POST'])
+@countries.route('/countries/players/<CountryName>', methods=['POST'])
 def add_player(CountryName):
     cursor = db.get_db().cursor()
     first = request.form['first']
