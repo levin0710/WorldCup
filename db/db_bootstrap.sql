@@ -36,7 +36,7 @@ VALUES
 
 CREATE TABLE Orders
 (
-  OrderID INT NOT NULL,
+  OrderID INT NOT NULL AUTO_INCREMENT,
   ShipAddress VARCHAR(40) NOT NULL,
   Quantity INT NOT NULL,
   TotalPrice INT NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE Country
 (
   CountryID VARCHAR(50) NOT NULL,
   Ranking INT NOT NULL,
-  CountryName VARCHAR(20) NOT NULL,
+  CountryName VARCHAR(50) NOT NULL,
   LastChampionshipDate VARCHAR(20) NOT NULL,
   Email VARCHAR(50) NOT NULL,
   Password VARCHAR(20) NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE Player
   LastName VARCHAR(20) NOT NULL,
   JerseyNum INT NOT NULL,
   Age INT NOT NULL,
-  ClubTeam VARCHAR(20) NOT NULL,
+  ClubTeam VARCHAR(50) NOT NULL,
   CareerGoals INT NOT NULL,
   CareerAssists INT NOT NULL,
   CityOfBirth VARCHAR(40) NOT NULL,
@@ -288,7 +288,6 @@ insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssis
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Dingivan', 22, 24, 'Predovic and Sons', 51, 19, 'Cigagade', 8, 'Florie', 'Indonesia');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Pepi', 47, 35, 'Kling and Sons', 99, 98, 'Saraktash', 6, 'Philipa', 'Russia');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Bonn', 14, 31, 'MacGyver-Mraz', 58, 85, 'Jianli', 1, 'Liv', 'Nicaragua');
-insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Geraldi', 61, 27, 'Harvey Inc', 62, 14, 'Ḩukūmat-e Shīnkaī', 9, 'Monroe', 'Afghanistan');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('O''Tierney', 68, 28, 'Macejkovic-Wunsch', 7, 55, 'Lityn', 11, 'Wernher', 'Ukraine');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('McCart', 27, 11, 'Steuber, Pfannerstill and Jakubowski', 36, 75, 'Madur', 9, 'Scotty', 'Indonesia');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Tettersell', 51, 30, 'Leffler, Lockman and Christiansen', 30, 76, 'Karangasem', 11, 'Nanny', 'Venezuela');
@@ -329,7 +328,6 @@ insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssis
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Wisher', 89, 27, 'Rohan-Cormier', 11, 28, 'Huangyang', 1, 'Stanislaw', 'China');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Durbin', 99, 30, 'Konopelski-Mante', 97, 47, 'Lizhuangzi', 7, 'Otis', 'China');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Bauduin', 57, 31, 'Haley-Bernier', 62, 10, 'Yahotyn', 8, 'Lyell', 'Ukraine');
-insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Halksworth', 76, 10, 'Stokes and Sons', 28, 96, 'Fayzabad', 8, 'Sibella', 'Afghanistan');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Brend', 59, 18, 'MacGyver-Aufderhar', 46, 70, 'Jiucaizhuang', 2, 'Timmy', 'China');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Dore', 14, 11, 'Reinger Inc', 17, 76, 'Cimenga', 9, 'Felicio', 'Indonesia');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Pikesley', 35, 19, 'Olson Group', 72, 85, 'Subrag', 10, 'Demetria', 'China');
@@ -353,7 +351,6 @@ insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssis
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Chart', 31, 25, 'DuBuque-Mraz', 54, 55, 'Da’ao', 6, 'Odelinda', 'China');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Gomme', 27, 11, 'Doyle, Carroll and Franecki', 23, 64, 'Limoeiro', 1, 'Lorettalorna', 'Brazil');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Escolme', 93, 30, 'Emmerich, Rau and O''Connell', 33, 99, 'Pantian', 11, 'Leelah', 'China');
-insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Bagshawe', 14, 31, 'Schinner, Kutch and Grady', 97, 10, '’Unābah', 7, 'Griffin', 'Afghanistan');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Omar', 62, 14, 'Klocko-Ernser', 53, 3, 'Aemura', 2, 'Stearn', 'Indonesia');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Terrelly', 45, 8, 'Altenwerth-Kunde', 2, 16, 'Levallois-Perret', 10, 'Colline', 'France');
 insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssists, CityOfBirth, Position, FirstName, CountryName) values ('Hanbidge', 24, 13, 'Volkman-Heidenreich', 77, 3, 'Krasnyy Kholm', 11, 'Germana', 'Russia');
@@ -417,25 +414,25 @@ insert into Player (LastName, JerseyNum, Age, ClubTeam, CareerGoals, CareerAssis
 
 
 
-insert into Orders (OrderID ,ShipAddress, Quantity, TotalPrice, OrderDate) values (1, '08783 Continental Lane', 39, 362.79, '7/4/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (2, '4481 Mitchell Alley', 63, 40.64, '3/6/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (3, '7 Division Court', 45, 71.89, '6/13/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (4, '37 Cherokee Point', 2, 710.99, '3/29/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (5, '5 Surrey Lane', 50, 306.13, '8/25/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (6, '9 Gale Crossing', 14, 417.21, '7/13/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (7, '92 Lerdahl Lane', 87, 669.4, '7/29/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (8, '8 Garrison Lane', 40, 595.48, '3/30/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (9, '6010 David Alley', 26, 132.83, '4/8/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (10,'21 Rutledge Park', 32, 156.16, '5/20/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (11, '49 Eagan Trail', 25, 190.67, '9/4/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (12, '4721 Golf Hill', 44, 834.28, '7/2/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (13, '5184 Red Cloud Drive', 14, 619.62, '1/18/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (14, '28847 Cherokee Terrace', 98, 517.47, '3/15/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (15, '33 Sycamore Junction', 28, 17.7, '6/10/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (16, '32 Sugar Avenue', 55, 163.38, '8/29/2022');
-insert into Orders (OrderID, ShipAddress, Quantity, TotalPrice, OrderDate) values (17, '48 Manitowish Court', 100, 401.93, '3/23/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('08783 Continental Lane', 39, 362.79, '7/4/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('4481 Mitchell Alley', 63, 40.64, '3/6/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('7 Division Court', 45, 71.89, '6/13/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('37 Cherokee Point', 2, 710.99, '3/29/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('5 Surrey Lane', 50, 306.13, '8/25/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('9 Gale Crossing', 14, 417.21, '7/13/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('92 Lerdahl Lane', 87, 669.4, '7/29/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('8 Garrison Lane', 40, 595.48, '3/30/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('6010 David Alley', 26, 132.83, '4/8/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('21 Rutledge Park', 32, 156.16, '5/20/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('49 Eagan Trail', 25, 190.67, '9/4/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('4721 Golf Hill', 44, 834.28, '7/2/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('5184 Red Cloud Drive', 14, 619.62, '1/18/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('28847 Cherokee Terrace', 98, 517.47, '3/15/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('33 Sycamore Junction', 28, 17.7, '6/10/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('32 Sugar Avenue', 55, 163.38, '8/29/2022');
+insert into Orders (ShipAddress, Quantity, TotalPrice, OrderDate) values ('48 Manitowish Court', 100, 401.93, '3/23/2022');
 
-insert into AlbumCompany (Password, CompanyName, ContactTitle, Phone, Address, City, PostalCode, LastLogin, Email, DateJoined, CompanyID, ContactName, OrderID, CountryName) values ('IKbSefZyKQ9n', 'Skyvu', 'Legal Assistant', '195-402-1132', '3793 Esch Crossing', 'Tomilino', '140074', '7/8/2022', 'gmorten0@amazonaws.com', '9/14/2022', 'e8dabc54-8fbd-4c9e-9b5c-54d826a2905b', 'Ginger Morten', 1, 'China');
+insert into AlbumCompany (Password, CompanyName, ContactTitle, Phone, Address, City, PostalCode, LastLogin, Email, DateJoined, CompanyID, ContactName, OrderID, CountryName) values ('IKbSefZyKQ9n', 'Panini', 'Legal Assistant', '195-402-1132', '3793 Esch Crossing', 'Tomilino', '140074', '7/8/2022', 'gmorten0@amazonaws.com', '9/14/2022', 'e8dabc54-8fbd-4c9e-9b5c-54d826a2905b', 'Ginger Morten', 1, 'China');
 insert into AlbumCompany (Password, CompanyName, ContactTitle, Phone, Address, City, PostalCode, LastLogin, Email, DateJoined, CompanyID, ContactName, OrderID, CountryName) values ('6K9ZINoyEz9', 'Meeveo', 'Staff Accountant III', '424-705-9381', '55 Dahle Point', 'Salitral', '10902', '6/5/2022', 'zpusey1@dailymotion.com', '3/15/2022', '728afabb-a9bd-48b6-9818-c2a1d6623a13', 'Zacherie Pusey', 2, 'China');
 insert into AlbumCompany (Password, CompanyName, ContactTitle, Phone, Address, City, PostalCode, LastLogin, Email, DateJoined, CompanyID, ContactName, OrderID, CountryName) values ('EGsMbt', 'Kimia', 'Senior Developer', '564-304-2169', '997 Forest Run Crossing', 'Pakenjeng', "12314", '1/13/2022', 'delms2@twitter.com', '5/5/2022', '853ecea3-329e-4bb8-8784-9700711f6620', 'Devin Elms', 3, 'China');
 insert into AlbumCompany (Password, CompanyName, ContactTitle, Phone, Address, City, PostalCode, LastLogin, Email, DateJoined, CompanyID, ContactName, OrderID, CountryName) values ('qxsi01M', 'Twiyo', 'Help Desk Technician', '593-962-0235', '45727 Brown Center', 'Tumaco', '528539', '1/3/2022', 'gcastaner3@wsj.com', '9/10/2022', '5b83cfed-b753-4c0e-bf04-29c10ad3edd0', 'Giffard Castaner', 4, 'China');

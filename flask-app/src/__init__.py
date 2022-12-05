@@ -28,11 +28,12 @@ def create_app():
 
     # Import the various routes
     from src.views import views
-    from src.countries.countries import customers
-    from src.products.products import products
+    from src.countries.countries import countries
+    from src.users.users import users
 
     # Register the routes that we just imported so they can be properly handled
     app.register_blueprint(views)
-    app.register_blueprint(customers)
+    app.register_blueprint(countries)
+    app.register_blueprint(users)
 
     return app
