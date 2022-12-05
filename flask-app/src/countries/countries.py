@@ -73,3 +73,24 @@ def get_player(CountryName, JerseyNum):
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
     return the_response
+
+
+@customers.route('/countries/players/<CountryName>', methods=['POST'])
+def add_player(CountryName):
+    cursor = db.get_db().cursor()
+    first = request.form['first']
+    last = request.form['last']
+    age = request.form['age']
+    num = request.form['num']
+    pos = request.form['pos']
+    cob = request.form['cob']
+    team = request.form['team']
+    goals = request.form['goals']
+    assists = request.form['assists']
+    cursor.execute(
+        f''' 
+            INSERT INTO Player(FirstName, LastName, Age, JerseyNum, Position, CityOfBirth, ClubTeam, CareerGoals, CareerAssists, CountryName)
+            VALUES ('{first}', '{last}', '{age}', '{num}', '{pos}', '{cob}', '{team}', '{goals}', '{assists}', '{CountryName}')
+        ''')
+    db.get_db().commit()
+    return "Success"
