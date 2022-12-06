@@ -29,6 +29,6 @@ The 'docker-compose' file is used to work as a medium and to put the files withi
 ## Final Thoughts 
 To create the actual application on AppSmith, we used ngrok, a programmable network edge that adds connectivity, security, and observability to our World Cup app. Through the use of all these applications, we were able to create a functional, operational application that utilizes a database. 
 
-
+## Video Demonstration
 https://user-images.githubusercontent.com/106932349/205989823-dc8069ba-911a-4c8c-b13a-7539e4800f0b.mp4
 
